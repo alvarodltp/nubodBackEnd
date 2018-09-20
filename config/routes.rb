@@ -4,7 +4,7 @@ resources :users, only: [:create, :index]
 resources :exercises
 
 # post '/signup', to: 'auth#signup'
-
-get '/me', to: 'users#show'
+post '/login', to: 'auth#login'
+get '/profile', to: 'users#show'
 
 end

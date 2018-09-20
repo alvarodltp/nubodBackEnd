@@ -9,12 +9,12 @@ class UsersController < ApplicationController
 
     def show
       # show the profile
-      render json: { email: my_current_user.email }
+      render json: { user: UserSerializer.new(my_current_user) }, status: :accepted
     end
 
     def create
     @user = User.create(user_params)
-    debugger
+    # debugger
     if @user.valid?
 
       render json: { user: UserSerializer.new(@user) }, status: :created
