@@ -1,11 +1,10 @@
 class UsersController < ApplicationController
   # ensure that you are authenticated
-  skip_before_action :authenticate, only: [:index, :create]
+  skip_before_action :authenticate, only: [:index, :create, :show, :update]
 
     def index
       render json: User.all
     end
-
 
     def show
       # show the profile
@@ -22,8 +21,17 @@ class UsersController < ApplicationController
     end
   end
 
+  def update
+    my_current_user.update(user_params)
+    if my_current_user.save
+      render json: my_current_user, status: :accepted
+    else
+      render json: { errors: my_current_user.errors.full_messages }, status: :unprocessible_entity
+    end
+  end
+
   private
     def user_params
-      params.require(:user).permit(:password, :first_name, :last_name, :user_name, :age, :weight, :gender, :activity_level, :goal, :calories, :bmr, :body_fat, :location, :email)
+      params.require(:user).permit(:daily_protein, :daily_fats, :daily_carbs, :password, :first_name, :last_name, :user_name, :age, :weight, :gender, :activity_level, :goal, :calories, :bmr, :body_fat, :location, :email)
     end
 end
