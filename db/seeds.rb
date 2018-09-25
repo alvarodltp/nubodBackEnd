@@ -62,10 +62,10 @@ exercise50 = Exercise.create(name: "Burpees", target: "", muscle_group: "full bo
 exercise51 = Exercise.create(name: "Jumping Jacks", target: "", muscle_group: "full body", instructions: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.", category: 5, rating: 3.5, equipment_needed: 'bench, barbell', instruction_image: "https://media1.popsugar-assets.com/files/thumbor/g3IqvrBcCL8PCn2kV4oYF5LCXy0/fit-in/2048xorig/filters:format_auto-!!-:strip_icc-!!-/2016/11/21/628/n/1922729/0e7e9800cb65fd44_Tricep-Push-Up.jpg", target_image: "")
 
 workout1 = Workout.create(name: "Back & Biceps", user_id: 1, date: "Mon, 24 Sep 2018", duration: "1.00", total_weight_lifted: 1000, personal_record: 150.0)
-# workout2 = Workout.create(name: "Chest day", user_id: 1, date: "Mon, 24 Sep 2018", duration: "1.00", total_weight_lifted: 1000, personal_record: 150.0)
-# workout3 = Workout.create(name: "Abs", user_id: 1, date: "Mon, 24 Sep 2018", duration: "1.00", total_weight_lifted: 1000, personal_record: 150.0)
-# workout4 = Workout.create(name: "Shoulders", user_id: 1, date: "Mon, 24 Sep 2018", duration: "1.00", total_weight_lifted: 1000, personal_record: 150.0)
-# workout5 = Workout.create(name: "Cardio", user_id: 1, date: "Mon, 24 Sep 2018", duration: "1.00", total_weight_lifted: 1000, personal_record: 150.0)
+workout2 = Workout.create(name: "Chest day", user_id: 1, date: "  Tue, 25 Sep 2018", duration: "1.00", total_weight_lifted: 1000, personal_record: 150.0)
+workout3 = Workout.create(name: "Abs", user_id: 1, date: "Wed, 26 Sep 2018", duration: "1.00", total_weight_lifted: 1000, personal_record: 150.0)
+workout4 = Workout.create(name: "Shoulders", user_id: 1, date: "Thu, 27 Sep 2018", duration: "1.00", total_weight_lifted: 1000, personal_record: 150.0)
+workout5 = Workout.create(name: "Cardio", user_id: 1, date: "Fri, 28 Sep 2018", duration: "1.00", total_weight_lifted: 1000, personal_record: 150.0)
 
 exercise_set1 = ExerciseSet.create(workout_id: 1, exercise_id: 3, weight: 100.0, reps: 15)
 exercise_set2 = ExerciseSet.create(workout_id: 1, exercise_id: 4, weight: 10.0, reps: 12)
