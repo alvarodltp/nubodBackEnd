@@ -68,6 +68,9 @@ workout4 = Workout.create(name: "Shoulders", user_id: 1, date: "Thu, 27 Sep 2018
 workout5 = Workout.create(name: "Cardio", user_id: 1, date: "Fri, 28 Sep 2018", duration: "1.00", total_weight_lifted: 1000, personal_record: 150.0)
 
 exercise_set1 = ExerciseSet.create(workout_id: 1, exercise_id: 3, weight: 100.0, reps: 15)
-exercise_set2 = ExerciseSet.create(workout_id: 1, exercise_id: 4, weight: 10.0, reps: 12)
-exercise_set3 = ExerciseSet.create(workout_id: 1, exercise_id: 5, weight: 150.0, reps: 10)
-exercise_set4 = ExerciseSet.create(workout_id: 1, exercise_id: 7, weight: 90.0, reps: 20)
+exercise_set2 = ExerciseSet.create(workout_id: 1, exercise_id: 3, weight: 100.0, reps: 15)
+exercise_set3 = ExerciseSet.create(workout_id: 1, exercise_id: 3, weight: 100.0, reps: 15)
+exercise_set4 = ExerciseSet.create(workout_id: 1, exercise_id: 4, weight: 100.0, reps: 15)
+exercise_set5 = ExerciseSet.create(workout_id: 1, exercise_id: 4, weight: 10.0, reps: 12)
+exercise_set6 = ExerciseSet.create(workout_id: 1, exercise_id: 4, weight: 150.0, reps: 10)
+exercise_set7 = ExerciseSet.create(workout_id: 1, exercise_id: 4, weight: 90.0, reps: 20)
