@@ -9,4 +9,12 @@ class WorkoutsController < ApplicationController
     render json: Workout.find(params[:id])
   end
 
+  def create
+    render json: Workout.create(workout_params)
+  end
+
+  private
+  def workout_params
+    params.require(:workout).permit(:name, :user_id, :date, :duration, :total_weight_lifted, :personal_record)
+  end
 end

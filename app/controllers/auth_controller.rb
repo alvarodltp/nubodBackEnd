@@ -1,5 +1,5 @@
 class AuthController < ApplicationController
-  skip_before_action :authenticate, only: [:signup, :login]
+  skip_before_action :authenticate, only: [:login]
 
   def login
     @user = User.find_by(email: params[:email])
@@ -11,9 +11,9 @@ class AuthController < ApplicationController
     end
   end
 
-private
-  def user_login_params
-    # params { user: {username: 'Chandler Bing', password: 'hi' } }
-    params.require(:user).permit(:email, :password)
-  end
+# private
+#   def user_login_params
+#     # params { user: {username: 'Chandler Bing', password: 'hi' } }
+#     params.require(:user).permit(:email, :password)
+#   end
 end
