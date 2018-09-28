@@ -1,4 +1,4 @@
-class ExersiceSetController < ApplicationController
+class ExerciseSetsController < ApplicationController
 
   skip_before_action :authenticate, only: [:index]
 

@@ -1,5 +1,5 @@
 class WorkoutsController < ApplicationController
-  skip_before_action :authenticate, only: [:index]
+  skip_before_action :authenticate, only: [:index, :show]
 
   def index
     render json: Workout.all
@@ -11,6 +11,10 @@ class WorkoutsController < ApplicationController
 
   def create
     render json: Workout.create(workout_params)
+  end
+
+  def destroy
+    Workout.find(params[:id]).destroy
   end
 
   private
