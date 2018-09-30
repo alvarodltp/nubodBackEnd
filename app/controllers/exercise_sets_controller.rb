@@ -1,6 +1,5 @@
 class ExerciseSetsController < ApplicationController
-
-  skip_before_action :authenticate, only: [:index]
+  skip_before_action :authenticate
 
   def index
     render json: ExerciseSet.all
@@ -12,6 +11,10 @@ class ExerciseSetsController < ApplicationController
 
   def create
     render json: ExerciseSet.create(exercise_set_params)
+  end
+
+  def destroy
+    render json: ExerciseSet.find(params[:id]).destroy
   end
 
   private
