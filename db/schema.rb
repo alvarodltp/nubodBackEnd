@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_09_24_171419) do
+ActiveRecord::Schema.define(version: 2018_10_08_231456) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -56,6 +56,7 @@ ActiveRecord::Schema.define(version: 2018_09_24_171419) do
     t.integer "daily_protein"
     t.integer "daily_carbs"
     t.integer "daily_fats"
+    t.float "height"
   end
 
   create_table "workouts", force: :cascade do |t|
