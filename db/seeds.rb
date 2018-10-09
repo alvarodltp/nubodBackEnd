@@ -6,7 +6,7 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-user1 = User.create(user_name: 'alvarodltp', first_name: 'Alvaro', last_name: 'De La Torre', location: "DC", gender: "male", email: "alvaro@alvaro.com", weight: 180.0, activity_level: "1-3 times per week", body_fat: 15.0, bmr: 1700.0, goal: 'Lose weight', calories: 2400, age: 29, password: 'pw', daily_fats: 80, daily_carbs: 200, daily_protein: 180)
+user1 = User.create(user_name: 'alvarodltp', first_name: 'Alvaro', last_name: 'De La Torre', location: "DC", gender: "", email: "alvaro@alvaro.com", weight: 180.0, height: 5.11, activity_level: "1-3 times per week", body_fat: 15.0, bmr: , goal: 'Lose weight', calories: 2400, age: 29, password: 'pw', daily_fats: 80, daily_carbs: 200, daily_protein: 180)
 
 
 exercise1 = Exercise.create(name: "Barbell Bench Press", muscle_group: "chest", target: "upper_chest", instructions: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.", category: 3.5, rating: 5, equipment_needed: 'bench, barbell', instruction_image: "https://media1.popsugar-assets.com/files/thumbor/g3IqvrBcCL8PCn2kV4oYF5LCXy0/fit-in/2048xorig/filters:format_auto-!!-:strip_icc-!!-/2016/11/21/628/n/1922729/0e7e9800cb65fd44_Tricep-Push-Up.jpg", target_image: "")
