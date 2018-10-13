@@ -4,6 +4,7 @@ resources :users, only: [:create, :index]
 resources :exercises
 resources :workouts, only: [:index, :create, :show, :destroy]
 resources :exercise_sets, only: [:index, :show, :destroy]
+resources :measurements 
 
 
 # post '/signup', to: 'auth#signup'

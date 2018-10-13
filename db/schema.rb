@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_10_12_160516) do
+ActiveRecord::Schema.define(version: 2018_10_13_215439) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -34,6 +34,23 @@ ActiveRecord::Schema.define(version: 2018_10_12_160516) do
     t.string "target_image"
     t.string "instruction_image"
     t.float "rating"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "measurements", force: :cascade do |t|
+    t.integer "user_id"
+    t.date "date"
+    t.float "body_weight"
+    t.float "body_fat"
+    t.float "bmr"
+    t.float "neck"
+    t.float "shoulder"
+    t.float "chest"
+    t.float "bicep"
+    t.float "waist"
+    t.float "hip"
+    t.float "thigh"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
