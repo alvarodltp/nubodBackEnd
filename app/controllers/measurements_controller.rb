@@ -10,7 +10,7 @@ class MeasurementsController < ApplicationController
   end
 
   def create
-    render json: Measurement.create(workout_params)
+    render json: Measurement.create(measurement_params)
   end
 
   private
