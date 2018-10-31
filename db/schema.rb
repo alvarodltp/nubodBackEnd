@@ -10,10 +10,25 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_10_13_215439) do
+ActiveRecord::Schema.define(version: 2018_10_31_181818) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "diets", force: :cascade do |t|
+    t.integer "user_id"
+    t.date "date"
+    t.integer "total_calories"
+    t.integer "total_fats"
+    t.integer "total_carbs"
+    t.integer "total_proteins"
+    t.integer "goal_calories"
+    t.integer "goal_fats"
+    t.integer "goal_carbs"
+    t.integer "goal_proteins"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "exercise_sets", force: :cascade do |t|
     t.integer "workout_id"
@@ -34,6 +49,20 @@ ActiveRecord::Schema.define(version: 2018_10_13_215439) do
     t.string "target_image"
     t.string "instruction_image"
     t.float "rating"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "foods", force: :cascade do |t|
+    t.integer "diet_id"
+    t.float "serving_size"
+    t.float "measure"
+    t.float "calories"
+    t.float "carbs"
+    t.float "fats"
+    t.float "proteins"
+    t.float "sodium"
+    t.float "sugars"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
